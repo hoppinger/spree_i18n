@@ -1,7 +1,7 @@
 module Spree
   Product.class_eval do
     translates :name, :description, :meta_description, :meta_keywords, :slug,
-      fallbacks_for_empty_translations: true
+      fallbacks_for_empty_translations: false
 
     friendly_id :slug_candidates, use: [:slugged, :globalize]
 
